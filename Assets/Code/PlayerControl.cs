@@ -18,7 +18,7 @@ namespace Mobiiliesimerkki
         private InputReader _inputReader = null;
         private IMover _mover = null;
         private Animator _animator = null;
-        private Health _health = null;
+        //private Health _health = null;
         private SpriteRenderer _spriteRenderer = null;
 
 
@@ -30,7 +30,7 @@ namespace Mobiiliesimerkki
         _mover = GetComponent<IMover>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _health = GetComponent<Health>();
+        //_health = GetComponent<Health>();
       }
         // Update is called once per frame
         private void Update()
@@ -62,12 +62,13 @@ namespace Mobiiliesimerkki
 
       private void UpdateAnimator(Vector2 movement)
       {
-        _animator.SetFloat(DirectionXAnimationParameter, movement.x);
-        _animator.SetFloat(DirectionYAnimationParameter, movement.y);
-        _animator.SetFloat(SpeedAnimationParameter, movement.sqrMagnitude);
+        _animator.SetBool("Moving", movement.magnitude > 0);
+        //_animator.SetFloat(DirectionXAnimationParameter, movement.x);
+        //_animator.SetFloat(DirectionYAnimationParameter, movement.y);
+        //_animator.SetFloat(SpeedAnimationParameter, movement.sqrMagnitude);
 
         //Käännetään hahmoa jos liikutaan oikealle.
-        bool lookRight = movement.x > 0;
+        bool lookRight = movement.x < 0;
         // Oikealle liikkuessa lookRight on true, jolloin voimme flipata
         // hahomon spriten x-akselin suhteen.
         _spriteRenderer.flipX = lookRight;
@@ -77,12 +78,12 @@ namespace Mobiiliesimerkki
 #region Public interface
       public void Heal(int amount)
       {
-        _health.IncreaseHealth(amount);
+        //_health.IncreaseHealth(amount);
       }
 
       public bool TakeDamage(int amount)
       {
-        if (!_health.DecreaseHealth(amount))
+        if (false)//!_health.DecreaseHealth(amount))
         {
           Die();
           return false;
