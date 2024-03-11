@@ -65,6 +65,7 @@ namespace Mobiiliesimerkki
         bool lookRight = movement.x < 0;
         // Oikealle liikkuessa lookRight on true, jolloin voimme flipata
         // hahomon spriten x-akselin suhteen.
+        // KT: ^tein purkkaratkasun ja käänsin väkäset toisinpäin
         _spriteRenderer.flipX = lookRight;
       }
 #endregion Private implementation
