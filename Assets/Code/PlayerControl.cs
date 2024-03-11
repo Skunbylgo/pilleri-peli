@@ -18,7 +18,6 @@ namespace Mobiiliesimerkki
         private InputReader _inputReader = null;
         private IMover _mover = null;
         private Animator _animator = null;
-        //private Health _health = null;
         private SpriteRenderer _spriteRenderer = null;
 
 
@@ -30,7 +29,6 @@ namespace Mobiiliesimerkki
         _mover = GetComponent<IMover>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        //_health = GetComponent<Health>();
       }
         // Update is called once per frame
         private void Update()
@@ -55,10 +53,6 @@ namespace Mobiiliesimerkki
 
 #region Private implementation
 
-      private void Die()
-      {
-        gameObject.SetActive(false);
-      }
 
       private void UpdateAnimator(Vector2 movement)
       {
@@ -74,22 +68,5 @@ namespace Mobiiliesimerkki
         _spriteRenderer.flipX = lookRight;
       }
 #endregion Private implementation
-
-#region Public interface
-      public void Heal(int amount)
-      {
-        //_health.IncreaseHealth(amount);
-      }
-
-      public bool TakeDamage(int amount)
-      {
-        if (false)//!_health.DecreaseHealth(amount))
-        {
-          Die();
-          return false;
-        }
-        return true;
-      }
-#endregion Public interface
   }
 }
