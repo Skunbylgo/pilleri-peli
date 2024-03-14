@@ -56,12 +56,13 @@ namespace Mobiiliesimerkki
 
       private void UpdateAnimator(Vector2 movement)
       {
-        _animator.SetFloat(DirectionXAnimationParameter, movement.x);
-        _animator.SetFloat(DirectionYAnimationParameter, movement.y);
-        _animator.SetFloat(SpeedAnimationParameter, movement.sqrMagnitude);
+        _animator.SetBool("Moving", movement.magnitude > 0);
+        //_animator.SetFloat(DirectionXAnimationParameter, movement.x);
+        //_animator.SetFloat(DirectionYAnimationParameter, movement.y);
+        //_animator.SetFloat(SpeedAnimationParameter, movement.sqrMagnitude);
 
         //Käännetään hahmoa jos liikutaan oikealle.
-        bool lookRight = movement.x > 0;
+        bool lookRight = movement.x < 0;
         // Oikealle liikkuessa lookRight on true, jolloin voimme flipata
         // hahomon spriten x-akselin suhteen.
         _spriteRenderer.flipX = lookRight;
