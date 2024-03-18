@@ -9,11 +9,12 @@ namespace pilleripeli
     {
         // Start is called before the first frame update
         private string carriedMedicine;
+        public GameObject currentPatient { get; set; }
         private SpriteResolver spriteResolver;
 
         void Start()
         {
-            spriteResolver = GetComponent<SpriteResolver>();
+            spriteResolver = GameObject.FindWithTag("Inventory").GetComponent<SpriteResolver>();
         }
         public string GetCarriedMedicine()
         {
@@ -22,10 +23,12 @@ namespace pilleripeli
 
         public void SetCarriedMedicine(string medicine)
         {
+            Debug.Log($"Trying to set carried medicine to {medicine}");
             carriedMedicine = medicine;
+            Debug.Log(this.gameObject.name);
             spriteResolver.SetCategoryAndLabel("Medicine", medicine);
 
-            Debug.Log($"Set carried medicine to {medicine}");
+            
         }
 
         // Update is called once per frame
