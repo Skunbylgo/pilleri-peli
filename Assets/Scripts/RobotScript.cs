@@ -15,10 +15,12 @@ namespace pilleripeli
         private const string DirectionYAnimationParameter = "DirectionY";
         private Vector2 currentTarget;
         private int currentIndex;
+        private Animator _animator;
         private Transform transform;
         // Start is called before the first frame update
         void Start()
         {
+            _animator = GetComponent<Animator>();
             transform = GetComponent<Transform>();
             currentIndex = 0;
             currentTarget = patrolNodes[currentIndex].GetComponent<Transform>().position;
@@ -34,9 +36,11 @@ namespace pilleripeli
         }
         void FixedUpdate()
         {
-            GetComponent<Transform>().position = Vector3.MoveTowards(transform.position, currentTarget, baseMovementSpeed * timeMultiplier * Time.deltaTime);
-
-
+            Vector3 movementVector = transform.position - (Vector3)currentTarget;
+            Vector3 moveDirection = Vector3.MoveTowards(transform.position, currentTarget, baseMovementSpeed * timeMultiplier * Time.deltaTime);
+            GetComponent<Transform>().position = moveDirection;
+            _animator.SetFloat("DirectionX", -movementVector.x);
+            _animator.SetFloat("DirectionY", -movementVector.y);
         }
         /*
         void OnTriggerEnter2D(Collider2D col)
