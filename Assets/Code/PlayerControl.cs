@@ -57,6 +57,7 @@ namespace Mobiiliesimerkki
       private void UpdateAnimator(Vector2 movement)
       {
         _animator.SetBool("MovingX", Mathf.Abs(movement.x) > Mathf.Abs(movement.y));
+        _animator.SetBool("MovingY", Mathf.Abs(movement.x) < Mathf.Abs(movement.y));
         _animator.SetFloat(DirectionXAnimationParameter, movement.x);
         _animator.SetFloat(DirectionYAnimationParameter, movement.y);
         //_animator.SetFloat(SpeedAnimationParameter, movement.sqrMagnitude);
