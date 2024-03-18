@@ -146,7 +146,7 @@ MonoBehaviour:
   needsMedicine: 0
   clipboardView: {fileID: 3634624149196609445, guid: 5b036a0a56cea6c4a832154d6446c929, type: 3}
   possibleMedicine:
-  - Blue
+  - Yellow
   - Green
   - Red
   timeToDeath: 10

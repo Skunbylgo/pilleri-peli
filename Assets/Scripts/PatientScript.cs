@@ -30,7 +30,7 @@ namespace pilleripeli
                     GenerateClipboard();
                 }
             }
-            else
+            else if(!needsMedicine)
             {
                 RollMedicine();
             }
