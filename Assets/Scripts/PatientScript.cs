@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mobiiliesimerkki;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 namespace pilleripeli
 {
     public class PatientScript : MonoBehaviour
     {
+        public GameManager gameManagerScript;
         [SerializeField]
         private bool needsMedicine = false;
         
@@ -17,6 +20,11 @@ namespace pilleripeli
         private string[] possibleMedicine;
         [SerializeField]
         protected int timeToDeath;
+        private SpriteResolver patientStatusResolver;
+        void Start()
+        {
+            patientStatusResolver = this.gameObject.GetComponentInChildren<SpriteResolver>();
+        }
         void OnTriggerEnter2D(Collider2D col)
         {
             if(col.CompareTag("Player"))
@@ -51,6 +59,7 @@ namespace pilleripeli
                 requiredMedicine = possibleMedicine[Random.Range(0,possibleMedicine.Length)];
                 Debug.Log($"{this.gameObject.name} now requires {requiredMedicine}.");
                 needsMedicine = true;
+                patientStatusResolver.SetCategoryAndLabel("Patient","Sick");
             }
             else
             {
@@ -75,6 +84,7 @@ namespace pilleripeli
             if(clone.GetComponentInChildren<DemoIVDrip>().requiredMedicine.Equals(GameObject.FindWithTag("Player").GetComponent<DemoCarried>().GetCarriedMedicine()))
             {
                 needsMedicine = false;
+                patientStatusResolver.SetCategoryAndLabel("Patient", "Healthy");
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
             Destroy(clone);
@@ -90,6 +100,10 @@ namespace pilleripeli
                 yield return null;
             }
             Debug.Log($"{this.gameObject.name} has died");
+            if(!gameManagerScript.gameOver)
+            {
+                gameManagerScript.GameOver();
+            }
         }
     }
 }
