@@ -243,7 +243,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1518,6 +1518,18 @@ PrefabInstance:
     - target: {fileID: 2230559446913330029, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230559446913330029, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437531899963844195, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437531899963844195, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_FillMethod
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
