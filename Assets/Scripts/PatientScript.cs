@@ -96,6 +96,8 @@ namespace pilleripeli
             float timer = 0.0f;
             while (timer < timeToDeath)
             {
+                if(!needsMedicine)
+                    StopCoroutine(DeathTimer());
                 timer += Time.deltaTime;
                 yield return null;
             }
