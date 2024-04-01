@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Mobiiliesimerkki;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
@@ -8,6 +10,9 @@ namespace pilleripeli
 {
     public class PatientScript : MonoBehaviour
     {
+        [SerializeField]
+        private GameObject debug_text;
+        private ParticleSystem sickened;
         public GameManager gameManagerScript;
         [SerializeField]
         private bool needsMedicine = false;
@@ -23,6 +28,7 @@ namespace pilleripeli
         private SpriteResolver patientStatusResolver;
         void Start()
         {
+            sickened = this.GetComponent<ParticleSystem>();
             patientStatusResolver = this.gameObject.GetComponentInChildren<SpriteResolver>();
         }
         void OnTriggerEnter2D(Collider2D col)
@@ -55,6 +61,7 @@ namespace pilleripeli
             Debug.Log("Rolling for medicine");
             if(Random.Range(0.0f,2.0f) > 1.0f)
             {
+                sickened.Play();
                 StartCoroutine(DeathTimer());
                 requiredMedicine = possibleMedicine[Random.Range(0,possibleMedicine.Length)];
                 Debug.Log($"{this.gameObject.name} now requires {requiredMedicine}.");
@@ -84,6 +91,7 @@ namespace pilleripeli
             if(clone.GetComponentInChildren<DemoIVDrip>().requiredMedicine.Equals(GameObject.FindWithTag("Player").GetComponent<DemoCarried>().GetCarriedMedicine()))
             {
                 needsMedicine = false;
+                StopAllCoroutines();
                 patientStatusResolver.SetCategoryAndLabel("Patient", "Healthy");
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
@@ -95,9 +103,9 @@ namespace pilleripeli
         {
             float timer = 0.0f;
             while (timer < timeToDeath)
-            {
-                if(!needsMedicine)
-                    StopCoroutine(DeathTimer());
+            {                    
+                if(debug_text != null)
+                    debug_text.GetComponent<TextMeshProUGUI>().text = timer.ToString();
                 timer += Time.deltaTime;
                 yield return null;
             }
