@@ -19,14 +19,14 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Healthy
       m_Hash: 806782068
-      m_Sprite: {fileID: -1716735537, guid: 14cab15f17a65c241bd5bcfe076b3e63, type: 3}
+      m_Sprite: {fileID: 887117385, guid: 545ac3176962e2047bee96ed8cafde01, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -1716735537, guid: 14cab15f17a65c241bd5bcfe076b3e63, type: 3}
+      m_SpriteOverride: {fileID: 887117385, guid: 545ac3176962e2047bee96ed8cafde01, type: 3}
     - m_Name: Sick
       m_Hash: 726273867
-      m_Sprite: {fileID: -695340481, guid: 980565ec36510674ea926a22290567bb, type: 3}
+      m_Sprite: {fileID: 247698091, guid: 24d2ff1f55a357a4aa8414d036d7d402, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -695340481, guid: 980565ec36510674ea926a22290567bb, type: 3}
+      m_SpriteOverride: {fileID: 247698091, guid: 24d2ff1f55a357a4aa8414d036d7d402, type: 3}
     - m_Name: Dead
       m_Hash: 219670042
       m_Sprite: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
@@ -35,5 +35,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638469997268972162
+  m_ModificationHash: 638476048097573097
   m_Version: 1
