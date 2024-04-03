@@ -10,10 +10,17 @@ namespace pilleripeli
 {
     public class GameManager : MonoBehaviour
     {
+        public string lang { get; private set; }
         public bool gameOver = false;
         public GameObject gameOverUI;
         public GameObject scoreText;
         private float timeSurvived = 0.0f;
+        public string gameOverType { get; private set; }
+
+        void Start()
+        {
+            lang = "Fin";
+        }
         public String getScore() { 
             return TimeSpan.FromSeconds(timeSurvived).ToString("g", new CultureInfo("En-Us"));
         }
@@ -23,14 +30,24 @@ namespace pilleripeli
         void FixedUpdate()
         {
             if(!gameOver)
+            {
                 timeSurvived += Time.deltaTime;
+            }
         }
         public void GameOver()
         {
+            gameOverType = "PatientDead";
             gameOver = true;
             Debug.Log("Showing GameOver screen.");
             gameOverUI.SetActive(true);
             //scoreText.GetComponent<TextMeshProUGUI>().text = TimeSpan.FromSeconds(timeSurvived).ToString("mm:ss");
+        }
+        public void OutOfCoffee()
+        {
+            gameOverType = "Coffee";
+            gameOver = true;
+            Debug.Log("Showing GameOver screen.");
+            gameOverUI.SetActive(true);
         }
         public void Restart()
         {
