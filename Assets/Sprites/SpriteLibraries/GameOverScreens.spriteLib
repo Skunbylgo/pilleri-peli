@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Fin
+    m_Hash: 358855889
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Coffee
+      m_Hash: 338242693
+      m_Sprite: {fileID: 21300000, guid: 79dadb12358d46c4e89c6c82125d34cd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 79dadb12358d46c4e89c6c82125d34cd, type: 3}
+    - m_Name: PatientDead
+      m_Hash: 75913390
+      m_Sprite: {fileID: 21300000, guid: d791ad62793d78b448182b5fca46f69e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d791ad62793d78b448182b5fca46f69e, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Eng
+    m_Hash: 565716203
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Coffee
+      m_Hash: 338242693
+      m_Sprite: {fileID: 21300000, guid: 78bc2ea844ddc5e4aa6684d12de4a04e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 78bc2ea844ddc5e4aa6684d12de4a04e, type: 3}
+    - m_Name: PatientDead
+      m_Hash: 75913390
+      m_Sprite: {fileID: 21300000, guid: 945a365848ef86b4d9dc3ae7e0eeaf19, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 945a365848ef86b4d9dc3ae7e0eeaf19, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638476074575435147
+  m_Version: 1
