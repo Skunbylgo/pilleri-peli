@@ -112,7 +112,7 @@ namespace pilleripeli
             Debug.Log($"{this.gameObject.name} has died");
             if(!gameManagerScript.gameOver)
             {
-                gameManagerScript.GameOver();
+                gameManagerScript.GameOver("PatientDead");
             }
         }
     }
