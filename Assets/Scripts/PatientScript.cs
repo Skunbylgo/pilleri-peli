@@ -26,10 +26,12 @@ namespace pilleripeli
         [SerializeField]
         protected int timeToDeath;
         private SpriteResolver patientStatusResolver;
+        private string category;
         void Start()
         {
             sickened = this.GetComponent<ParticleSystem>();
             patientStatusResolver = this.gameObject.GetComponentInChildren<SpriteResolver>();
+            category = patientStatusResolver.GetCategory();
         }
         void OnTriggerEnter2D(Collider2D col)
         {
@@ -66,7 +68,7 @@ namespace pilleripeli
                 requiredMedicine = possibleMedicine[Random.Range(0,possibleMedicine.Length)];
                 Debug.Log($"{this.gameObject.name} now requires {requiredMedicine}.");
                 needsMedicine = true;
-                patientStatusResolver.SetCategoryAndLabel("Patient","Sick");
+                patientStatusResolver.SetCategoryAndLabel(category,"Sick");
             }
             else
             {
