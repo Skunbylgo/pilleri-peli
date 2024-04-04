@@ -84,6 +84,9 @@ namespace pilleripeli
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().currentPatient = this.gameObject;
             clone = Instantiate(clipboardView);
+            var spriteResolvers = clone.GetComponentsInChildren<SpriteResolver>();
+            spriteResolvers[1].SetCategoryAndLabel(category, patientStatusResolver.GetLabel());
+            spriteResolvers[0].SetCategoryAndLabel("Medicine", requiredMedicine);
             //clone.GetComponent<DemoIVDrip>().SetRequiredMedicine(requiredMedicine);
         }
         public void AdministerMedicine()
