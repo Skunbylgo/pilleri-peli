@@ -5,11 +5,25 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace pilleripeli
 {
     public class GameManager : MonoBehaviour
     {
+        [SerializeField]
+        protected GameObject coffeeScreen;
+        private GameObject coffeeClone;
+        public float coffeeMax;
+        [SerializeField]
+        private float coffee;
+        [SerializeField]
+        private float coffeePerSip;
+        [SerializeField]
+        private GameObject coffeeMeter;
+        [SerializeField]
+        private float coffeeDegradationMult;
         public string lang { get; private set; }
         public bool gameOver = false;
         public GameObject gameOverUI;
@@ -20,35 +34,49 @@ namespace pilleripeli
         void Start()
         {
             lang = "Fin";
+            coffee = coffeeMax;
         }
         public String getScore() { 
             return TimeSpan.FromSeconds(timeSurvived).ToString("g", new CultureInfo("En-Us"));
         }
-        // Start is called before the first frame update
-
-        // Update is called once per frame
         void FixedUpdate()
         {
+            coffee = Math.Clamp(coffee, 0.0f, coffeeMax);
             if(!gameOver)
             {
+                coffeeMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(coffee,50);
                 timeSurvived += Time.deltaTime;
+                coffee -= Time.deltaTime * coffeeDegradationMult;
+            }
+            if(coffee <= 0.1f)
+            {
+                GameOver("Coffee");
             }
         }
-        public void GameOver()
+        public void DrinkCoffee()
         {
-            gameOverType = "PatientDead";
+            coffee += coffeePerSip;
+        }
+        public void LoadCoffee()
+        {
+            coffeeScreen.SetActive(true);
+            //coffeeClone = Instantiate(coffeeScreen,Vector3.zero,Quaternion.identity);
+        }
+        public void UnloadCoffee()
+        {
+            coffeeScreen.SetActive(false);
+            //Destroy(coffeeClone);
+        }
+        public void GameOver(string gameOverType)
+        {
+            this.gameOverType = gameOverType;
             gameOver = true;
             Debug.Log("Showing GameOver screen.");
             gameOverUI.SetActive(true);
+            GameObject.Find("CoffeeMeter").SetActive(false);
             //scoreText.GetComponent<TextMeshProUGUI>().text = TimeSpan.FromSeconds(timeSurvived).ToString("mm:ss");
         }
-        public void OutOfCoffee()
-        {
-            gameOverType = "Coffee";
-            gameOver = true;
-            Debug.Log("Showing GameOver screen.");
-            gameOverUI.SetActive(true);
-        }
+
         public void Restart()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
