@@ -13,8 +13,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library:
-  - m_Name: Patient
-    m_Hash: 359132791
+  - m_Name: 1
+    m_Hash: 64810935
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Healthy
+      m_Hash: 806782068
+      m_Sprite: {fileID: 21300000, guid: 1ab354029205a8e4d92eaf84e27d4bcc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 1ab354029205a8e4d92eaf84e27d4bcc, type: 3}
+    - m_Name: Sick
+      m_Hash: 726273867
+      m_Sprite: {fileID: 21300000, guid: 7e163990394ae7440842b2721e886d4d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7e163990394ae7440842b2721e886d4d, type: 3}
+    - m_Name: Dead
+      m_Hash: 219670042
+      m_Sprite: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: 2
+    m_Hash: 450215437
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Healthy
+      m_Hash: 806782068
+      m_Sprite: {fileID: 21300000, guid: 7cacb0bb1311da14e88f93bf2ce3f8df, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7cacb0bb1311da14e88f93bf2ce3f8df, type: 3}
+    - m_Name: Sick
+      m_Hash: 726273867
+      m_Sprite: {fileID: 21300000, guid: 9c8bbd6abad41b542b6720384fcb7d9f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 9c8bbd6abad41b542b6720384fcb7d9f, type: 3}
+    - m_Name: Dead
+      m_Hash: 219670042
+      m_Sprite: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: 3
+    m_Hash: 768773787
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Healthy
@@ -34,6 +76,69 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: 4
+    m_Hash: 867572536
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Healthy
+      m_Hash: 806782068
+      m_Sprite: {fileID: 21300000, guid: 27ea661acc83f6d4db6bce49bef18b69, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 27ea661acc83f6d4db6bce49bef18b69, type: 3}
+    - m_Name: Sick
+      m_Hash: 726273867
+      m_Sprite: {fileID: 21300000, guid: d03539f266dc1894eac2965eea37991a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d03539f266dc1894eac2965eea37991a, type: 3}
+    - m_Name: Dead
+      m_Hash: 219670042
+      m_Sprite: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: 5
+    m_Hash: 78719918
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Healthy
+      m_Hash: 806782068
+      m_Sprite: {fileID: 21300000, guid: 3826712c05f7f234981bb1b47c1acaa5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3826712c05f7f234981bb1b47c1acaa5, type: 3}
+    - m_Name: Sick
+      m_Hash: 726273867
+      m_Sprite: {fileID: 21300000, guid: e368471037fec434980414b7a55711a9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: e368471037fec434980414b7a55711a9, type: 3}
+    - m_Name: Dead
+      m_Hash: 219670042
+      m_Sprite: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: 6
+    m_Hash: 498629140
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Healthy
+      m_Hash: 806782068
+      m_Sprite: {fileID: 21300000, guid: 18e4a248ce40a7545983df1b2eaaae5e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 18e4a248ce40a7545983df1b2eaaae5e, type: 3}
+    - m_Name: Sick
+      m_Hash: 726273867
+      m_Sprite: {fileID: 21300000, guid: f0e6785ac9d31484cb014b0697ba3c1e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f0e6785ac9d31484cb014b0697ba3c1e, type: 3}
+    - m_Name: Dead
+      m_Hash: 219670042
+      m_Sprite: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 37b6645875c831f4288941a4184c1333, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638476761232331925
+  m_ModificationHash: 638478000881051294
   m_Version: 1
