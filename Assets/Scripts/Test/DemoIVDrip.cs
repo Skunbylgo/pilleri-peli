@@ -40,8 +40,9 @@ namespace pilleripeli
             //requiredMedicine = medicineLabels[Random.Range(0,medicineLabels.Count-1)];
             //Debug.Log($"Required medicine is now {requiredMedicine}");
             */
-            // Slight delay so the sprite actually changes.
-            Invoke(nameof(ChangeColor), 0.1f);
+            // OBSOLETE
+            // Slight delay so the sprite actually changes. 
+            //Invoke(nameof(ChangeColor), 0.1f);
             
         }
 
