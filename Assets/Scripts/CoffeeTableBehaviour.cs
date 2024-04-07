@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using pilleripeli;
 using UnityEngine;
 
-namespace Mobiiliesimerkki
+namespace pilleripeli
 {
     public class CoffeeTableBehaviour : MonoBehaviour
     {
