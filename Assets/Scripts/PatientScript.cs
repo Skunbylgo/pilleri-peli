@@ -97,7 +97,7 @@ namespace pilleripeli
             {
                 needsMedicine = false;
                 StopAllCoroutines();
-                patientStatusResolver.SetCategoryAndLabel("Patient", "Healthy");
+                patientStatusResolver.SetCategoryAndLabel(category, "Healthy");
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
             Destroy(clone);
