@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.65882355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1690,6 +1690,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1046228101662883119, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_labelHash
+      value: 3.1584688e-36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046228101662883119, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_SpriteHash
+      value: 998763649
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046228101662883119, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_CategoryHash
+      value: 1.2478097e-18
+      objectReference: {fileID: 0}
     - target: {fileID: 1794275765068158895, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1778,9 +1790,53 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2755152732514231168, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79dadb12358d46c4e89c6c82125d34cd, type: 3}
+    - target: {fileID: 3360302995060227198, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 254
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360302995060227198, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360302995060227198, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360302995060227198, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -133
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979189615955527068, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 63
+      objectReference: {fileID: 0}
     - target: {fileID: 3979189615955527068, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -101.9
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398425062531692912, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398425062531692912, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398425062531692912, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398425062531692912, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -133
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094535445230917466, guid: b5347d3979550054bb48a43561d6e44e, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1838,7 +1894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2814,8 +2870,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 398d4a3bb2319d948933da28742c58b7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
