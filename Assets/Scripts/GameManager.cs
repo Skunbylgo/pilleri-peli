@@ -33,7 +33,7 @@ namespace pilleripeli
 
         void Start()
         {
-            lang = PlayerPrefs.GetString("Lang");
+            lang = PlayerPrefs.GetString("Lang") != null ? PlayerPrefs.GetString("Lang") : "Eng";
             coffee = coffeeMax;
         }
         public String getScore() { 
