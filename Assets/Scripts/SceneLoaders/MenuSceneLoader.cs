@@ -9,6 +9,7 @@ namespace pilleripeli
     {
         public void LoadSceneByName()
         {
+            PlayerPrefs.SetString("Lang", "Eng");
             SceneManager.LoadScene("Assets/Scenes/MainMenu.unity");
         }
     }
