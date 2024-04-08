@@ -12,7 +12,9 @@ namespace pilleripeli
     {
         [SerializeField]
         private GameObject debug_text;
-        private ParticleSystem sickened;
+        private ParticleSystem wrongMedicineEffect;
+        private ParticleSystem sickenedEffect;
+        private float defaultSickenedRate;
         public GameManager gameManagerScript;
         [SerializeField]
         private bool needsMedicine = false;
@@ -29,7 +31,9 @@ namespace pilleripeli
         private string category;
         void Start()
         {
-            sickened = this.GetComponent<ParticleSystem>();
+            sickenedEffect = this.gameObject.GetComponentInChildren<ParticleSystem>();
+            defaultSickenedRate = sickenedEffect.emission.rateOverTimeMultiplier;
+            wrongMedicineEffect = this.GetComponent<ParticleSystem>();
             patientStatusResolver = this.gameObject.GetComponentInChildren<SpriteResolver>();
             category = patientStatusResolver.GetCategory();
         }
@@ -63,7 +67,8 @@ namespace pilleripeli
             Debug.Log("Rolling for medicine");
             if(Random.Range(0.0f,2.0f) > 1.0f)
             {
-                sickened.Play();
+                wrongMedicineEffect.Play();
+                sickenedEffect.Play();
                 StartCoroutine(DeathTimer());
                 requiredMedicine = possibleMedicine[Random.Range(0,possibleMedicine.Length)];
                 Debug.Log($"{this.gameObject.name} now requires {requiredMedicine}.");
@@ -98,6 +103,7 @@ namespace pilleripeli
                 needsMedicine = false;
                 StopAllCoroutines();
                 patientStatusResolver.SetCategoryAndLabel(category, "Healthy");
+                sickenedEffect.Stop();
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
             Destroy(clone);
@@ -106,9 +112,12 @@ namespace pilleripeli
 
         IEnumerator DeathTimer()
         {
+            var emi = sickenedEffect.emission;
             float timer = 0.0f;
             while (timer < timeToDeath)
             {                    
+                emi.rateOverTimeMultiplier += Time.deltaTime;
+                //sickenedEffect.emission = emi;
                 if(debug_text != null)
                     debug_text.GetComponent<TextMeshProUGUI>().text = timer.ToString();
                 timer += Time.deltaTime;
