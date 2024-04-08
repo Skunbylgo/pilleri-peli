@@ -33,7 +33,7 @@ namespace pilleripeli
 
         void Start()
         {
-            lang = "Fin";
+            lang = PlayerPrefs.GetString("Lang");
             coffee = coffeeMax;
         }
         public String getScore() { 
@@ -44,7 +44,7 @@ namespace pilleripeli
             coffee = Math.Clamp(coffee, 0.0f, coffeeMax);
             if(!gameOver)
             {
-                coffeeMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(coffee,50);
+                coffeeMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(coffee,98);
                 timeSurvived += Time.deltaTime;
                 coffee -= Time.deltaTime * coffeeDegradationMult;
             }
@@ -83,7 +83,10 @@ namespace pilleripeli
         }
         public void MainMenu()
         {
-            SceneManager.LoadScene("MainMenu");
+            if(lang == "Eng")
+                SceneManager.LoadScene("MainMenu");
+            else if(lang == "Fin")
+                SceneManager.LoadScene("MainMenuFi");
         }
     }
 }
