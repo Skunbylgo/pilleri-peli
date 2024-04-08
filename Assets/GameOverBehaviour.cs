@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.UI;
 
-namespace Mobiiliesimerkki
+namespace pilleripeli
 {
     public class GameOverBehaviour : MonoBehaviour
     {

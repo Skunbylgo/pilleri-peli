@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mobiiliesimerkki
+namespace pilleripeli
 {
     public class ParticleTrigger : MonoBehaviour
     {
