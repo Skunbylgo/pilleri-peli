@@ -112,12 +112,9 @@ namespace pilleripeli
 
         IEnumerator DeathTimer()
         {
-            var emi = sickenedEffect.emission;
             float timer = 0.0f;
             while (timer < timeToDeath)
             {                    
-                emi.rateOverTimeMultiplier += Time.deltaTime;
-                //sickenedEffect.emission = emi;
                 if(debug_text != null)
                     debug_text.GetComponent<TextMeshProUGUI>().text = timer.ToString();
                 timer += Time.deltaTime;
