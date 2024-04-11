@@ -106,8 +106,6 @@ namespace pilleripeli
                 sickenedEffect.Stop();
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
-            Destroy(clone);
-            
         }
 
         IEnumerator DeathTimer()
