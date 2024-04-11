@@ -618,10 +618,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementRange: 50
+  m_MovementRange: 200
   m_DynamicOriginRange: 100
   m_ControlPath: <Gamepad>/leftStick
-  m_Behaviour: 0
+  m_Behaviour: 1
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
     m_Name: 
@@ -1143,7 +1143,8 @@ MonoBehaviour:
   - {fileID: 936843884}
   - {fileID: 1312092610}
   - {fileID: 1429398757}
-  baseMovementSpeed: 2
+  baseMovementSpeed: 1
+  timeMultiplier: 1
 --- !u!61 &553021248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1860,8 +1861,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 200.00003}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchoredPosition: {x: 300, y: 300}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880884742
 MonoBehaviour:
@@ -2178,7 +2179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5220839809702024198, guid: 0126aff093d2f2a419a9877e7dd2e1ba, type: 3}
       propertyPath: m_CategoryHash
-      value: 2.3937565e-11
+      value: 8.840178e-23
       objectReference: {fileID: 0}
     - target: {fileID: 7934787439227312678, guid: 0126aff093d2f2a419a9877e7dd2e1ba, type: 3}
       propertyPath: m_Library.Array.size
@@ -3014,6 +3015,14 @@ PrefabInstance:
       propertyPath: coffeeScreen
       value: 
       objectReference: {fileID: 85041206}
+    - target: {fileID: 4971144373201597615, guid: 289bb53cc231dd04dbca3e2241924216, type: 3}
+      propertyPath: difficultyScaling
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971144373201597615, guid: 289bb53cc231dd04dbca3e2241924216, type: 3}
+      propertyPath: difficultyInterval
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4971144373201597615, guid: 289bb53cc231dd04dbca3e2241924216, type: 3}
       propertyPath: coffeeDegradationMult
       value: 5
