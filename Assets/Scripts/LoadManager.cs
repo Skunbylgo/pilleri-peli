@@ -14,23 +14,14 @@ namespace pilleripeli
         private string sceneToLoad;
         void Start()
         {
-            if(PlayerPrefs.GetString("Lang") == "Eng")
-            {
-                Debug.Log("Loading English scene");
-                sceneToLoad = "MainMenu";
-            }
-            else if(PlayerPrefs.GetString("Lang") == "Fin")
-            {
-                Debug.Log("Loading Finnish scene");
-                sceneToLoad = "MainMenuFi";
-            }
-            else
+            sceneToLoad = "MainMenu";
+            if(!PlayerPrefs.HasKey("Lang"))
             {
                 Debug.Log("Lang setting missing from PlayerPrefs, setting to \"Eng\"");
                 PlayerPrefs.SetString("Lang", "Eng");
-                Debug.Log("Loading English scene");
-                sceneToLoad = "MainMenu";
+                
             }
+            Debug.Log($"Loading {PlayerPrefs.GetString("Lang")} localisation");
             StartCoroutine(FadeIn());
         }
         IEnumerator FadeIn()
