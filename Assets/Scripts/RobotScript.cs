@@ -10,7 +10,7 @@ namespace pilleripeli
         private GameObject[] patrolNodes;
         [SerializeField]
         private float baseMovementSpeed;
-        private float timeMultiplier = 1.0f;
+        public float timeMultiplier = 1.0f;
         private const string DirectionXAnimationParameter = "DirectionX";
         private const string DirectionYAnimationParameter = "DirectionY";
         private Vector2 currentTarget;

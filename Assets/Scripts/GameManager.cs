@@ -30,6 +30,11 @@ namespace pilleripeli
         public GameObject scoreText;
         private float timeSurvived = 0.0f;
         public string gameOverType { get; private set; }
+        float difficultyTimer = 0.0f;
+        [SerializeField]
+        private float difficultyScaling;
+        [SerializeField]
+        private float difficultyInterval;
 
         void Start()
         {
@@ -41,6 +46,12 @@ namespace pilleripeli
         }
         void FixedUpdate()
         {
+            if(difficultyTimer > difficultyInterval)
+            {
+                difficultyTimer = 0.0f;
+                GameObject.Find("Robotti").GetComponent<RobotScript>().timeMultiplier += difficultyScaling;
+            }
+            difficultyTimer += Time.deltaTime;
             coffee = Math.Clamp(coffee, 0.0f, coffeeMax);
             if(!gameOver)
             {
