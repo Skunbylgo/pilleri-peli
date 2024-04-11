@@ -104,6 +104,13 @@ namespace pilleripeli
                 StopAllCoroutines();
                 patientStatusResolver.SetCategoryAndLabel(category, "Healthy");
                 sickenedEffect.Stop();
+                GameObject.Find("Healthy").GetComponent<ParticleSystem>().Play();
+                var spriteResolvers = clone.GetComponentsInChildren<SpriteResolver>();
+                spriteResolvers[1].SetCategoryAndLabel(category, patientStatusResolver.GetLabel());
+            }
+            else
+            {
+                GameObject.Find("Sick").GetComponent<ParticleSystem>().Play();
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
         }
