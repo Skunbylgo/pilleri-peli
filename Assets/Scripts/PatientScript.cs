@@ -27,8 +27,11 @@ namespace pilleripeli
         private string[] possibleMedicine;
         [SerializeField]
         protected int timeToDeath;
+        [SerializeField]
+        private float gracePeriod;
         private SpriteResolver patientStatusResolver;
         private string category;
+        private bool isVulnerable = true;
         void Start()
         {
             sickenedEffect = this.gameObject.GetComponentInChildren<ParticleSystem>();
@@ -65,7 +68,7 @@ namespace pilleripeli
         void RollMedicine()
         {
             Debug.Log("Rolling for medicine");
-            if(Random.Range(0.0f,2.0f) > 1.0f)
+            if(Random.Range(0.0f,2.0f) > 1.0f && isVulnerable)
             {
                 wrongMedicineEffect.Play();
                 sickenedEffect.Play();
@@ -107,6 +110,7 @@ namespace pilleripeli
                 GameObject.Find("Healthy").GetComponent<ParticleSystem>().Play();
                 var spriteResolvers = clone.GetComponentsInChildren<SpriteResolver>();
                 spriteResolvers[1].SetCategoryAndLabel(category, patientStatusResolver.GetLabel());
+                StartCoroutine(GracePeriod());
             }
             else
             {
@@ -130,6 +134,12 @@ namespace pilleripeli
             {
                 gameManagerScript.GameOver("PatientDead");
             }
+        }
+        IEnumerator GracePeriod()
+        {
+            isVulnerable = false;
+            yield return new WaitForSeconds(gracePeriod);
+            isVulnerable = true;
         }
     }
 }

@@ -160,6 +160,7 @@ MonoBehaviour:
   - Green
   - Red
   timeToDeath: 35
+  gracePeriod: 10
 --- !u!198 &-616034320029677427
 ParticleSystem:
   m_ObjectHideFlags: 0
