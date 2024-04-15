@@ -17,10 +17,18 @@ namespace pilleripeli
         public string requiredMedicine;
         public void OnPointerClick(PointerEventData pointerEventData)
         {
+            var currentMed = playerInventory.GetCarriedMedicine();
             //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
             Debug.Log(name + " Game Object Clicked!");
-            spriteResolver.SetCategoryAndLabel("Medicine", playerInventory.GetCarriedMedicine());
-            GameObject.FindWithTag("Player").GetComponent<DemoCarried>().currentPatient.GetComponent<PatientScript>().AdministerMedicine();
+            spriteResolver.SetCategoryAndLabel("Medicine", currentMed);
+            if(currentMed.Equals("None"))
+            {
+                //Do nothing
+            }
+            else
+            {
+                GameObject.FindWithTag("Player").GetComponent<DemoCarried>().currentPatient.GetComponent<PatientScript>().AdministerMedicine();
+            }
             //spriteResolver
         }
         // Start is called before the first frame update
