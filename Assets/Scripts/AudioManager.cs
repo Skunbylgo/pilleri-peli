@@ -71,6 +71,7 @@ namespace pilleripeli
         }
         private void PlayClip(AudioClip audioClip)
         {
+            Debug.Log($"Playing AudioClip {audioClip.name}");
             audioSource.PlayOneShot(audioClip);
         }
     }
