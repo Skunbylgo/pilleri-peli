@@ -35,11 +35,17 @@ namespace pilleripeli
         }
         public void PlayDeathMusic()
         {
+            /*
+            in comments until music is imported
             PlayMusic(deathMusic[Random.Range(0,deathMusic.Length)]);
+            */
+            PlayMusic(null);
         }
         private void PlayMusic(AudioClip audioClip)
         {
             audioSource.Stop();
+            if(audioClip.Equals(null))
+                return;
             audioSource.clip = audioClip;
             audioSource.Play();
         }
