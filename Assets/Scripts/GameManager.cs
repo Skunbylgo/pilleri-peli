@@ -51,7 +51,7 @@ namespace pilleripeli
         }
         void FixedUpdate()
         {
-            if(coffee < (coffeeMax / 2) && canYawn)
+            if(coffee < (coffeeMax / 2) && canYawn && !gameOver)
             {
                 canYawn = false;
                 StartCoroutine(YawnCooldown());
@@ -70,7 +70,7 @@ namespace pilleripeli
                 timeSurvived += Time.deltaTime;
                 coffee -= Time.deltaTime * coffeeDegradationMult;
             }
-            if(coffee <= 0.1f)
+            if(coffee <= 0.1f && !gameOver)
             {
                 GameOver("Coffee");
             }
