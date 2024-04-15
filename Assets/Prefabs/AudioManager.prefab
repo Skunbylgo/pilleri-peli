@@ -198,3 +198,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f5708d47cd1e9614783b4669ed1b3400, type: 3}
   - {fileID: 8300000, guid: 9406ed033bda2b44cb4dca012a6de21b, type: 3}
   - {fileID: 8300000, guid: 516aed6aa5c1d614aa937d6975659fcb, type: 3}
+  drinkAudioclip: {fileID: 8300000, guid: 2d6659c51b6572345927f171035e8ac7, type: 3}
