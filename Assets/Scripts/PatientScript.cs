@@ -11,8 +11,13 @@ namespace pilleripeli
     public class PatientScript : MonoBehaviour
     {
         [SerializeField]
+        protected GameObject patient;
+        [SerializeField]
+        protected GameObject healthyGO;
+        [SerializeField]
         private GameObject debug_text;
         private ParticleSystem wrongMedicineEffect;
+        private ParticleSystem correctMedicineEffect;
         private ParticleSystem sickenedEffect;
         private float defaultSickenedRate;
         public GameManager gameManagerScript;
@@ -34,7 +39,8 @@ namespace pilleripeli
         private bool isVulnerable = true;
         void Start()
         {
-            sickenedEffect = this.gameObject.GetComponentInChildren<ParticleSystem>();
+            sickenedEffect = patient.GetComponent<ParticleSystem>();
+            correctMedicineEffect = healthyGO.GetComponent<ParticleSystem>();
             defaultSickenedRate = sickenedEffect.emission.rateOverTimeMultiplier;
             wrongMedicineEffect = this.GetComponent<ParticleSystem>();
             patientStatusResolver = this.gameObject.GetComponentInChildren<SpriteResolver>();
@@ -107,10 +113,11 @@ namespace pilleripeli
                 StopAllCoroutines();
                 patientStatusResolver.SetCategoryAndLabel(category, "Healthy");
                 sickenedEffect.Stop();
-                GameObject.Find("Healthy").GetComponent<ParticleSystem>().Play();
+                correctMedicineEffect.Play();
                 var spriteResolvers = clone.GetComponentsInChildren<SpriteResolver>();
                 spriteResolvers[1].SetCategoryAndLabel(category, patientStatusResolver.GetLabel());
                 StartCoroutine(GracePeriod());
+                Destroy(clone);
             }
             else
             {
