@@ -106,9 +106,14 @@ namespace pilleripeli
         public void AdministerMedicine()
         {
             
-
+            var audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+            audioManager.PlayAdministerClip();
             if(clone.GetComponentInChildren<DemoIVDrip>().requiredMedicine.Equals(GameObject.FindWithTag("Player").GetComponent<DemoCarried>().GetCarriedMedicine()))
             {
+                if(Random.Range(0.0f, 1.0f) < 0.33f)
+                {
+                    audioManager.PlayHappyClip();
+                }
                 needsMedicine = false;
                 StopAllCoroutines();
                 patientStatusResolver.SetCategoryAndLabel(category, "Healthy");
@@ -121,6 +126,7 @@ namespace pilleripeli
             }
             else
             {
+                audioManager.PlaySurprisedClip();
                 GameObject.Find("Sick").GetComponent<ParticleSystem>().Play();
             }
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine("None");
