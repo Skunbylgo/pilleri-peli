@@ -13,6 +13,8 @@ namespace pilleripeli
             //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
             Debug.Log(name + " Game Object Clicked!");
             GameObject.FindWithTag("Player").GetComponent<DemoCarried>().SetCarriedMedicine(name);
+            var audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+            audioManager.PlayPillClip();
         }
         // Start is called before the first frame update
         void Start()
