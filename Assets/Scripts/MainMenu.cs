@@ -7,6 +7,11 @@ namespace pilleripeli
 {
     public class MainMenu : MonoBehaviour
     {
+        void Start()
+        {
+            var musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
+            musicManager.PlayMenuMusic();
+        }
         public void OnPlayTapped()
         {
             Debug.Log("Play button tapped");
