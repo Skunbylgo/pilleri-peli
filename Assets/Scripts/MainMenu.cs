@@ -8,8 +8,6 @@ namespace pilleripeli
 {
     public class MainMenu : MonoBehaviour
     {
-        [SerializeField]
-        private SceneAsset tutorialScene;
         void Start()
         {
             var musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
@@ -23,7 +21,7 @@ namespace pilleripeli
         public void OnInstructionsTapped()
         {
             Debug.Log("Instructions button tapped");
-            SceneManager.LoadScene(tutorialScene.name);
+            SceneManager.LoadScene("HowToPlay");
         }
         public void OnSettingsTapped()
         {
