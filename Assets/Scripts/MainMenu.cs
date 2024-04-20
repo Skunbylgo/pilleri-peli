@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,10 +18,10 @@ namespace pilleripeli
             Debug.Log("Play button tapped");
             SceneManager.LoadScene("SampleScene");
         }
-        public void OnQuitTapped()
+        public void OnInstructionsTapped()
         {
-            Debug.Log("Quit button tapped");
-            Application.Quit();
+            Debug.Log("Instructions button tapped");
+            SceneManager.LoadScene("HowToPlay");
         }
         public void OnSettingsTapped()
         {

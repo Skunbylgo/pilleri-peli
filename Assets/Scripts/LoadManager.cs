@@ -14,12 +14,23 @@ namespace pilleripeli
         private string sceneToLoad;
         void Start()
         {
+            if(!PlayerPrefs.HasKey("MusicVolume"))
+            {
+                PlayerPrefs.SetFloat("MusicVolume", 1.0f);
+            }
+            if(!PlayerPrefs.HasKey("EffectVolume"))
+            {
+                PlayerPrefs.SetFloat("EffectVolume", 1.0f);
+            }
+            if(!PlayerPrefs.HasKey("Volume"))
+            {
+                PlayerPrefs.SetFloat("Volume", 1.0f);
+            }
             sceneToLoad = "MainMenu";
             if(!PlayerPrefs.HasKey("Lang"))
             {
                 Debug.Log("Lang setting missing from PlayerPrefs, setting to \"Eng\"");
                 PlayerPrefs.SetString("Lang", "Eng");
-                
             }
             Debug.Log($"Loading {PlayerPrefs.GetString("Lang")} localisation");
             StartCoroutine(FadeIn());

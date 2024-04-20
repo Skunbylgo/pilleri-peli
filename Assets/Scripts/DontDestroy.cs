@@ -8,7 +8,7 @@ namespace pilleripeli
     {
         void Awake()
         {
-            GameObject[] objs = GameObject.FindGameObjectsWithTag("music");
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
 
             if (objs.Length > 1)
             {

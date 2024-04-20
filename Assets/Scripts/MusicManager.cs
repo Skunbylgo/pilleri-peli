@@ -47,7 +47,12 @@ namespace pilleripeli
             if(audioClip.Equals(null))
                 return;
             audioSource.clip = audioClip;
+            audioSource.volume = PlayerPrefs.GetFloat("MusicVolume");
             audioSource.Play();
+        }
+        public void ChangeVolume(float value)
+        {
+            audioSource.volume = value;
         }
     }
 }
