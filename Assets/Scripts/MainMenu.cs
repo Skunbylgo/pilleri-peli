@@ -21,7 +21,10 @@ namespace pilleripeli
         public void OnInstructionsTapped()
         {
             Debug.Log("Instructions button tapped");
-            SceneManager.LoadScene("HowToPlay");
+            if(PlayerPrefs.GetString("Lang").Equals("Fin"))
+                SceneManager.LoadScene("HowToPlay");
+            else
+                SceneManager.LoadScene("HowToPlay_en");
         }
         public void OnSettingsTapped()
         {
