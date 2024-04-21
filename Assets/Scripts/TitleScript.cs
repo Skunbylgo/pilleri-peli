@@ -11,6 +11,10 @@ namespace pilleripeli
         void Start()
         {
             var lang = PlayerPrefs.GetString("Lang");
+            SetTitle(lang);
+        }
+        public void SetTitle(string lang)
+        {
             var title = GameObject.Find("Title");
             var spriteLib = title.GetComponent<SpriteLibrary>();
             title.GetComponent<Image>().sprite = spriteLib.GetSprite("Menu", lang);
