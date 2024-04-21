@@ -111,10 +111,7 @@ namespace pilleripeli
         }
         public void MainMenu()
         {
-            if(lang == "Eng")
-                SceneManager.LoadScene("MainMenu");
-            else if(lang == "Fin")
-                SceneManager.LoadScene("MainMenuFi");
+            SceneManager.LoadScene("MainMenu");
         }
         IEnumerator YawnCooldown()
         {
