@@ -34,6 +34,7 @@ namespace pilleripeli
 
         public void MusicVolumeSlider(float volume)
         {
+            ChangeMusicVolume(volume);
             musicVolumeTextUI.text = (volume * 100.0f).ToString("000");
         }
 
@@ -46,7 +47,7 @@ namespace pilleripeli
             PlayerPrefs.SetFloat("EffectVolume", effectVolumeValue);
             PlayerPrefs.SetFloat("MusicVolume", musicVolumeValue);
             LoadValues();
-            GameObject.Find("MusicManager").GetComponent<MusicManager>().ChangeVolume(musicVolumeValue);
+            ChangeMusicVolume(musicVolumeValue);
         }
 
         void LoadValues()
@@ -58,6 +59,17 @@ namespace pilleripeli
             effectVolumeSlider.value = effectVolumeValue;
             musicVolumeSlider.value = musicVolumeValue;
             AudioListener.volume = volumeValue;
+        }
+        void ChangeMusicVolume(float value)
+        {
+            try
+            {
+                GameObject.Find("MusicManager").GetComponent<MusicManager>().ChangeVolume(value);
+            }
+            catch (System.Exception)
+            {
+                Debug.Log("Couldn't find MusicManager");
+            }
         }
     }
 }

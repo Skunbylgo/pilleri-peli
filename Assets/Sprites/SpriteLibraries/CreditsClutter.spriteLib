@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Clutter
+    m_Hash: 934242481
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: PillYellow
+      m_Hash: 124125870
+      m_Sprite: {fileID: -1203720110, guid: 5eab72e3fb690364082412c6c8aafaa7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1203720110, guid: 5eab72e3fb690364082412c6c8aafaa7, type: 3}
+    - m_Name: PillGreen
+      m_Hash: 1067856320
+      m_Sprite: {fileID: -1008041662, guid: 5eab72e3fb690364082412c6c8aafaa7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1008041662, guid: 5eab72e3fb690364082412c6c8aafaa7, type: 3}
+    - m_Name: PillRed
+      m_Hash: 18709201
+      m_Sprite: {fileID: 1485189169, guid: 5eab72e3fb690364082412c6c8aafaa7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1485189169, guid: 5eab72e3fb690364082412c6c8aafaa7, type: 3}
+    - m_Name: Robot
+      m_Hash: 434786784
+      m_Sprite: {fileID: 119490445, guid: 5a9a5187fdab136498ede0f9dc684dd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 119490445, guid: 5a9a5187fdab136498ede0f9dc684dd6, type: 3}
+    - m_Name: Coffee
+      m_Hash: 338242693
+      m_Sprite: {fileID: -1894576577, guid: d96ab149cd3f88b40a5688dbd73a8f3b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1894576577, guid: d96ab149cd3f88b40a5688dbd73a8f3b, type: 3}
+    - m_Name: Plant
+      m_Hash: 717365878
+      m_Sprite: {fileID: 21300000, guid: cdb7a2a89a168094a9a1af165682bc9f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: cdb7a2a89a168094a9a1af165682bc9f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638493393849051524
+  m_Version: 1

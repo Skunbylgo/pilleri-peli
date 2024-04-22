@@ -22,10 +22,8 @@ namespace pilleripeli
             {
                 PlayerPrefs.SetFloat("EffectVolume", 1.0f);
             }
-            if(!PlayerPrefs.HasKey("Volume"))
-            {
-                PlayerPrefs.SetFloat("Volume", 1.0f);
-            }
+            PlayerPrefs.SetFloat("Volume", 1.0f);
+
             sceneToLoad = "MainMenu";
             if(!PlayerPrefs.HasKey("Lang"))
             {
