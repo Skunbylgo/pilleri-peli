@@ -1378,9 +1378,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1416558551}
-        m_TargetAssemblyTypeName: pilleripeli.GameManager, Assembly-CSharp
-        m_MethodName: MainMenu
+      - m_Target: {fileID: 1183293017}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 204400635}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1806171234}
+        m_TargetAssemblyTypeName: pilleripeli.VolumeSaveController, Assembly-CSharp
+        m_MethodName: SaveVolumeButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1634,7 +1658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1642,11 +1666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -1659,11 +1683,11 @@ PrefabInstance:
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1183293017}
+      objectReference: {fileID: 1416558551}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 204400635}
+      objectReference: {fileID: 1806171234}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -1682,11 +1706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
+      value: SaveVolumeButton
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -1698,23 +1722,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: pilleripeli.GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: pilleripeli.VolumeSaveController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: pilleripeli.VolumeSaveController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3219056916197687153, guid: 42359399b8bda564abde000dc4935a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2293,7 +2329,7 @@ GameObject:
   - component: {fileID: 864417838}
   - component: {fileID: 864417837}
   m_Layer: 5
-  m_Name: QuitEng
+  m_Name: ResumeEng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2338,7 +2374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2539,7 +2575,7 @@ GameObject:
   - component: {fileID: 1038688152}
   - component: {fileID: 1038688151}
   m_Layer: 5
-  m_Name: QuitFin
+  m_Name: ResumeFin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2584,7 +2620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lopeta
+  m_text: Jatka
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
