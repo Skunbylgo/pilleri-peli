@@ -30,6 +30,11 @@ namespace pilleripeli
         {
             Debug.Log("Settings button tapped");
         }
+        public void OnCreditsTapped()
+        {
+            Debug.Log("Credits tapped");
+            SceneManager.LoadScene("Credits");
+        }
     }
 }
 
